@@ -1,0 +1,23 @@
+#!/bin/bash
+# 0-installation-script
+# Steps I took to install SASS
+
+# 1. Check Node.js version
+node --version
+
+# 2. Check npm version
+npm -v
+
+# 3. Install nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# 4. Load nvm in the current shell
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# 5. Install sass
+npm install sass
+
+# 6. Verify installation
+npx sass --version
